@@ -1,0 +1,52 @@
+@import "./../variables.css";
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(200, 0, 0, 0);
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    opacity: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(200, 0, 0, 0);
+
+    &:checked ~ .checkbox__indicator {
+      border-color: var(--brand-color-orange);
+      background-image: url("./img/check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--invalid ~ .checkbox__indicator {
+      border-color: var(--color-red);
+    }
+  }
+
+  &__indicator {
+    display: block;
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d5cec2;
+    border-radius: var(--border-radius);
+  }
+
+  &__text {
+    color: #000000;
+    width: calc(100% - 40px);
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}

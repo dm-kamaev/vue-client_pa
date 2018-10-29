@@ -1,0 +1,9 @@
+@import "./../variables.css";
+
+.text {
+  font-weight: normal;
+  font-size: var(--font-size-sm);
+  line-height: 1em;
+  color: var(--text-color);
+  letter-spacing: 0.4px;
+}

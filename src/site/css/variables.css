@@ -1,0 +1,57 @@
+:root {
+  /* Color */
+  --color-lg-brown: #a77d5a;
+  --color-white: #ffffff;
+  --brand-color-brown: #692f17;
+  --brand-color-orange: #fd8204;
+  --color-green: #65b22b;
+  --color-red: #b72727;
+  --color-coffee: #d2b093;
+  --color-cappuccino: #dfd1c4;
+  --color-latte: #f0eae0;
+  --color-dark-gold: #795548;
+  /* Font */
+  --base-font-family: "Open Sans", "Arial", sans-serif;
+  --extra-font-family: "Open Sans", "Arial", sans-serif;
+  --heading-font-family: "Open Sans", "Arial", sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  /* Background page */
+  --bg-white: #ffffff;
+  --bg-light: #f8f4ec;
+  --bg-dark: #f0eae0;
+  /* Text */
+  --title-color: var(--brand-color-brown);
+  --heading-color: var(--brand-color-brown);
+  --text-color: var(--brand-color-brown);
+  --text-color-dark-gold: var(--color-dark-gold);
+  --text-color-white: var(--color-white);
+  --text-color-orange: var(--brand-color-orange);
+  --text-color-lg-brown: var(--color-lg-brown);
+  /* Border */
+  --border-radius: 3px;
+  --border-color-white: var(--color-white);
+  --border-color-lg-brown: var(--color-lg-brown);
+  --border-color-coffee: var(--color-coffee);
+  --border-color-orange: var(--brand-color-orange);
+  --border-color-cappuccino: var(--color-cappuccino);
+  --border-color-latte: var(--color-latte);
+  /* Button */
+  --button-hover: #ff9113;
+  --button-focus: #ff9113;
+  --wrap-margin: 7.8%; /* на удаление */
+  --wrap-padding-sm: 6.25%;
+  --wrap-padding-md: 7.8%;
+  --wrap-margin-sm: var(--wrap-padding-sm);
+  --wrap-margin-md: var(--wrap-padding-md);
+}
+@custom-media --small-viewport (min-width: 768px);
+@custom-media --medium-width (min-width: 400px);
+@custom-media --tablet (min-width: 768px);
+@custom-media --desktop (min-width: 1280px);
+@custom-media --landing-desktop (min-width: 1024px);
+@custom-media --retina-mobile (min-resolution: 144dpi);
+@custom-media --retina-tablet (min-width: 768px) and (min-resolution: 144dpi);
+@custom-media --retina-desktop (min-width: 1280px) and (min-resolution: 144dpi);

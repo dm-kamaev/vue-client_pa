@@ -1,0 +1,212 @@
+@import "../variables.css";
+
+.multiselect {
+  box-sizing: content-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 40px;
+  text-align: left;
+  color: #35495e;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active:not(.multiselect--above) .multiselect__tags {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &--active &__select {
+    transform: rotateZ(180deg);
+    top: calc(50% - 6px);
+  }
+
+  &--active:not(.multiselect--above) .multiselect__content-wrapper {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &--active .multiselect__placeholder {
+    display: none;
+  }
+
+  &--above .multiselect__content-wrapper {
+    bottom: 100%;
+    border-bottom: none;
+    border-top: 1px solid #d5cec2;
+  }
+
+  &--above.multiselect--active .multiselect__tags {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    display: block;
+    background: #fff;
+    width: 100%;
+    max-height: 240px;
+    overflow: auto;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 3;
+    -webkit-overflow-scrolling: touch!important;
+
+    @media (--tablet) {
+      border: 1px solid #d5cec2;
+      border-top: none;
+      border-radius: 0;
+    }
+  }
+
+  &__select {
+    line-height: 16px;
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 17px;
+    height: 9px;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 8px;
+    margin: 0;
+    background: url("./img/arrow.svg") no-repeat;
+    background-size: 17px 9px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  &__option {
+    display: block;
+    padding: 12px 25px;
+    text-decoration: none;
+    text-transform: none;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  &__option--highlight {
+    background: var(--brand-color-orange);
+    outline: none;
+    color: white;
+  }
+
+  &__option--highlight:after {
+    content: attr(data-select);
+    background: var(--brand-color-orange);
+    color: white;
+  }
+
+  &__option--selected {
+    background: var(--brand-color-orange);
+    color: #35495e;
+    font-weight: bold;
+  }
+
+  &__single {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+    padding: 12px 0 12px 25px;
+    border: none;
+    background: #fff;
+    width: calc(100%);
+    transition: border 0.1s ease;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+
+  &__tags {
+    min-height: 40px;
+    display: block;
+    padding-right: 40px;
+    border: 1px solid #d5cec2;
+    background: #ffffff;
+
+    @media (--tablet) {
+      border: 1px solid #d5cec2;
+      border-radius: 0;
+    }
+  }
+
+  &__placeholder {
+    color: #adadad;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-top: 2px;
+  }
+
+  &__content {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    vertical-align: top;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.15s ease;
+  }
+  &-enter,
+  &-leave-active {
+    opacity: 0;
+  }
+}
+
+*[dir="rtl"] .multiselect {
+  text-align: right;
+}
+
+*[dir="rtl"] .multiselect__select {
+  right: auto;
+  left: 1px;
+}
+
+*[dir="rtl"] .multiselect__tags {
+  padding: 8px 8px 0px 40px;
+}
+
+*[dir="rtl"] .multiselect__content {
+  text-align: right;
+}
+
+*[dir="rtl"] .multiselect__option:after {
+  right: auto;
+  left: 0;
+}
+
+*[dir="rtl"] .multiselect__clear {
+  right: auto;
+  left: 12px;
+}
+
+*[dir="rtl"] .multiselect__spinner {
+  right: auto;
+  left: 1px;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}

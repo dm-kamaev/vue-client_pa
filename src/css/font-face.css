@@ -1,0 +1,31 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  src: url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-Roman.woff") format("woff");
+  src: url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-Roman.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: lighter;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  src: url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-Lt.woff") format("woff"),
+      url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-Lt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  src: url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-Bd.woff") format("woff"),
+    url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-Bd.woff2") format("woff2");
+}
+
+
+@font-face {
+  font-weight: normal;
+  font-family: "Helvetica Neue";
+  font-style: italic;
+  src: url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-It.woff") format("woff"),
+  url("https://www.dev.domovenok.su/static/pancake/fonts/HelveticaNeueLTW1G-It.woff2") format("woff2");
+}

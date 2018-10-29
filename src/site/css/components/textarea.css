@@ -1,0 +1,26 @@
+@import "./../variables.css";
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  font-size: var(--font-size-sm);
+  font-family: var(--base-font-family);
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid #d5cec2;
+  box-shadow: none;
+  resize: none;
+  -webkit-tap-highlight-color: rgba(200, 0, 0, 0);
+  -webkit-appearance: none;
+
+  &:focus {
+    border: 1px solid var(--border-color-orange);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #8e8d8d;
+  }
+}

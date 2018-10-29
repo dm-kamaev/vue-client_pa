@@ -1,0 +1,11 @@
+@import "./../variables.css";
+
+.title {
+  margin: 0;
+  font-weight: normal;
+  font-size: var(--font-size-md);
+  line-height: 1em;
+  font-family: var(--heading-font-family);
+  color: var(--text-color);
+  letter-spacing: 0.4px;
+}
